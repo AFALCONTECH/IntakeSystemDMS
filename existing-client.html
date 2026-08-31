@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database — Existing Client</title>
+    <link rel="stylesheet" href="existing-client.css">
+</head>
+
+<body>
+
+<main class="database-screen">
+
+    <header class="header">
+        <div class="brand">DATABASE</div>
+        <div class="system-label">EXISTING CLIENT</div>
+    </header>
+
+
+    <section class="client-browser">
+
+        <div class="browser-header">
+
+            <div>
+                <p class="eyebrow">CLIENT DATABASE</p>
+                <h1>EXISTING CLIENTS</h1>
+            </div>
+
+        </div>
+
+
+        <div class="search-panel">
+
+            <div class="field">
+
+                <label for="clientSearch">
+                    SEARCH CLIENT
+                </label>
+
+                <input
+                    type="text"
+                    id="clientSearch"
+                    placeholder="NAME"
+                    autocomplete="off"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div
+            class="client-list"
+            id="clientList"
+        >
+            <!-- CLIENTS LOAD HERE -->
+        </div>
+
+
+        <div
+            class="empty-state"
+            id="emptyState"
+        >
+            NO CLIENTS IN DATABASE
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <div class="navigation">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="backToDatabase"
+            >
+                ← DATABASE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+
+        <span>DATABASE</span>
+
+        <span>CLIENT RECORDS</span>
+
+    </footer>
+
+</main>
+
+
+<script src="existing-client.js"></script>
+
+</body>
+</html>
