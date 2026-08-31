@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: #f2f4f7;
+}
+
+.record-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 32px 40px;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #29313a;
+    padding-bottom: 20px;
+}
+
+.brand {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.system-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #89929d;
+}
+
+
+/* =========================
+   RECORD
+   ========================= */
+
+.record {
+    width: min(100%, 1000px);
+    margin: 55px auto;
+    flex: 1;
+}
+
+.record-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #89929d;
+    margin-bottom: 14px;
+}
+
+.record-id {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #66717d;
+}
+
+
+/* =========================
+   CLIENT NAME
+   ========================= */
+
+.record-name-input {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #f2f4f7;
+    font-family: inherit;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -2px;
+    outline: none;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.record-section {
+    border-top: 1px solid #29313a;
+    padding: 28px 0 35px;
+}
+
+.record-section h2 {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #89929d;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   DATA GRID
+   ========================= */
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.data-item {
+    min-height: 85px;
+    padding: 18px 20px;
+    border: 1px solid #29313a;
+    background: #11171e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.data-item.wide {
+    grid-column: 1 / -1;
+}
+
+.data-item span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #66717d;
+}
+
+
+/* =========================
+   EDITABLE FIELDS
+   ========================= */
+
+.data-item input,
+.data-item select,
+.data-item textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #29313a;
+    border-radius: 0;
+    background: #151b22;
+    color: #f2f4f7;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+}
+
+.data-item input,
+.data-item select {
+    min-height: 42px;
+    padding: 10px 12px;
+}
+
+.data-item textarea {
+    min-height: 70px;
+    padding: 10px 12px;
+    resize: vertical;
+    line-height: 1.4;
+}
+
+
+/* FIELD FOCUS */
+
+.data-item input:focus,
+.data-item select:focus,
+.data-item textarea:focus {
+    border-color: #66717d;
+    outline: none;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navigation {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* BACK BUTTON */
+
+.secondary-button {
+    min-height: 48px;
+    padding: 16px 22px;
+    border: 1px solid #29313a;
+    background: transparent;
+    color: #aeb7c2;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    border-color: #f2f4f7;
+    color: #f2f4f7;
+}
+
+
+/* =========================
+   SAVE BUTTON
+   ========================= */
+
+#saveChanges {
+    min-height: 48px;
+    padding: 16px 22px;
+    border: 1px solid #29313a;
+    background: #f2f4f7;
+    color: #0b0f14;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+#saveChanges:hover {
+    background: #ffffff;
+}
+
+
+/* =========================
+   DELETE BUTTON
+   ========================= */
+
+.danger-button {
+    min-height: 48px;
+    padding: 16px 22px;
+    border: 1px solid #7a3030;
+    background: transparent;
+    color: #d98b8b;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+
+.danger-button:hover {
+    background: #7a3030;
+    color: #ffffff;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-top: 1px solid #29313a;
+    padding-top: 16px;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: #66717d;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 700px) {
+
+    .record-screen {
+        padding: 24px 20px;
+    }
+
+    .record {
+        margin: 40px auto;
+    }
+
+    .record-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
+
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .data-item.wide {
+        grid-column: auto;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation button {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}

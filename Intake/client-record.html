@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database — Client Record</title>
+    <link rel="stylesheet" href="client-record.css">
+</head>
+
+<body>
+
+<main class="record-screen">
+
+    <header class="header">
+        <div class="brand">DATABASE</div>
+        <div class="system-label">CLIENT RECORD</div>
+    </header>
+
+
+    <section class="record">
+
+        <div class="record-heading">
+
+            <div>
+                <p class="eyebrow">CLIENT RECORD</p>
+
+                <input
+                    type="text"
+                    id="clientName"
+                    class="record-name-input"
+                    placeholder="CLIENT NAME"
+                >
+            </div>
+
+            <div class="record-id" id="clientId">
+                —
+            </div>
+
+        </div>
+
+
+        <!-- CLIENT -->
+
+        <section class="record-section">
+
+            <h2>CLIENT</h2>
+
+            <div class="data-grid">
+
+                <div class="data-item">
+                    <span>FIRST NAME</span>
+                    <input type="text" id="firstName">
+                </div>
+
+                <div class="data-item">
+                    <span>LAST NAME</span>
+                    <input type="text" id="lastName">
+                </div>
+
+                <div class="data-item">
+                    <span>PHONE</span>
+                    <input type="tel" id="clientPhone">
+                </div>
+
+                <div class="data-item">
+                    <span>EMAIL</span>
+                    <input type="email" id="clientEmail">
+                </div>
+
+                <div class="data-item">
+                    <span>PREFERRED CONTACT</span>
+
+                    <select id="preferredContact">
+                        <option value="">SELECT</option>
+                        <option value="CALL">CALL</option>
+                        <option value="TEXT">TEXT</option>
+                        <option value="EMAIL">EMAIL</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- BOAT -->
+
+        <section class="record-section">
+
+            <h2>BOAT</h2>
+
+            <div class="data-grid">
+
+                <div class="data-item">
+                    <span>TYPE</span>
+
+                    <select id="boatType">
+                        <option value="">SELECT</option>
+                        <option value="V-HULL">V-HULL</option>
+                        <option value="PONTOON">PONTOON</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+
+                </div>
+
+                <div class="data-item">
+                    <span>MAKE</span>
+
+                    <select id="boatMake">
+                        <option value="">SELECT</option>
+                        <option value="DUFFY">DUFFY</option>
+                        <option value="ELECTRACRAFT">ELECTRACRAFT</option>
+                        <option value="OTHER">OTHER</option>
+                    </select>
+
+                </div>
+
+                <div class="data-item">
+                    <span>MODEL / CLASS</span>
+                    <input type="text" id="boatModel">
+                </div>
+
+                <div class="data-item wide">
+                    <span>NOTES</span>
+                    <textarea id="boatNotes"></textarea>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LOCATION -->
+
+        <section class="record-section">
+
+            <h2>LOCATION</h2>
+
+            <div class="data-grid">
+
+                <div class="data-item">
+                    <span>COMMUNITY / LAKE</span>
+
+                    <select id="community">
+                        <option value="">SELECT</option>
+                        <option>Lake La Quinta</option>
+                        <option>Tierra Lago</option>
+                        <option>Motor Coach Country Club (MCC)</option>
+                        <option>Speed Boat Lake</option>
+                        <option>Laguna Del La Paz</option>
+                        <option>Lake Mirage</option>
+                        <option>Santo Tomas</option>
+                        <option>Other</option>
+                    </select>
+
+                </div>
+
+                <div class="data-item">
+                    <span>CITY</span>
+
+                    <select id="city">
+                        <option value="">SELECT</option>
+                        <option>Indio</option>
+                        <option>La Quinta</option>
+                        <option>Rancho Mirage</option>
+                        <option>Palm Desert</option>
+                        <option>Palm Springs</option>
+                        <option>Bermuda Dunes</option>
+                        <option>Other</option>
+                    </select>
+
+                </div>
+
+                <div class="data-item wide">
+                    <span>STREET ADDRESS</span>
+                    <input type="text" id="address">
+                </div>
+
+                <div class="data-item wide">
+                    <span>GATE / ACCESS</span>
+                    <textarea id="access"></textarea>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+
+        <div class="navigation">
+
+            <button
+                type="button"
+                class="secondary-button"
+                id="backToClients"
+            >
+                ← CLIENTS
+            </button>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="saveChanges"
+            >
+                SAVE CHANGES
+            </button>
+
+            <button
+                type="button"
+                class="danger-button"
+                id="deleteClient"
+            >
+                DELETE CLIENT
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <span>DATABASE</span>
+        <span>CLIENT RECORD</span>
+    </footer>
+
+</main>
+
+<script src="client-record.js"></script>
+
+</body>
+</html>
